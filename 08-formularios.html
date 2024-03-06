@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de Cotización de Página Web</h1>
+
+    <form action="" method="post">
+        <!-- Sección informacion del cliente -->
+        <h2>Información del Cliente</h2>
+        <label for="nombre">Nombre:</label>                                                 <!-- El elemento <label> es una etiqueta que acompaña a un campo -->
+        <input type="text" id="nombre" name="nombre" required>                              <!-- El elemento <input> representa un campo del formulario para enviar datos -->
+        <br>
+        
+        <label for="correo_electronico">Correo electrónico:</label>
+        <input type="email" id="correo_electronico" name="correo_electronico" required>     <!-- type="email" define campo de entrada de correo electrónico & required (obligatorio) -->
+        <br>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">                                    <!-- type="tel" define campo de entrada de telefono -->
+        <br>
+        
+        <label for="empresa">Empresa/Organización:</label>
+        <input type="text" id="empresa" name="empresa">                                     <!-- type="text" define campo de entrada de texto & required (obligatorio) -->
+        <br>
+        
+        <!-- Sección información del proyecto -->
+        <h2>Información del Proyecto</h2>
+        <label for="nombre_proyecto">Nombre del proyecto:</label>
+        <input type="text" id="nombre_proyecto" name="nombre_proyecto" required>
+        <br>
+        
+        <label for="objetivo">Objetivo de la página web:</label>
+        <textarea id="objetivo" name="objetivo" required></textarea>                        <!-- El elemento <textarea> define campo de texto extendido del formulario para enviar datos -->
+        <br>
+        
+        <label for="publico">¿A qué tipo de público se dirige la página web?:</label>
+        <input type="text" id="publico" name="publico">
+        <br>
+        
+        <label for="contenido">¿Qué tipo de contenido tendrá la página web?:</label>
+        <textarea id="contenido" name="contenido"></textarea>
+        <br>
+        
+        <label for="ejemplos">¿Tiene ejemplos de páginas web que le gusten?:</label>
+        <input type="text" id="ejemplos" name="ejemplos">
+        <br>
+        
+        <!-- Sección funcionalidades requeridas -->
+        <h2>Funcionalidades</h2>
+        <label for="funcionalidades">¿Desea que la página web tenga alguna funcionalidad específica?:</label>
+        <textarea id="funcionalidades" name="funcionalidades"></textarea>
+        <br>
+        
+        <label for="movil">¿Necesita que la página web sea compatible con dispositivos móviles?:</label>
+        <select id="movil" name="movil">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+        
+        <br>
+
+        <!-- Sección Diseño -->
+        <h2>Diseño</h2>
+        <label for="preferencias_diseño">¿Tiene alguna preferencia de diseño?:</label>
+        <textarea id="preferencias_diseño" name="preferencias_diseño"></textarea>
+        <br>
+        
+        <label for="logotipo">¿Tiene un logotipo o marca que desea incorporar en la página web?:</label>
+        <input type="file" id="logotipo" name="logotipo">
+        <br>
+        
+        <!-- Sección Presupuesto -->
+        <h2>Presupuesto</h2>
+        <label for="presupuesto">¿Tiene un presupuesto en mente?:</label>
+        <input type="number" id="presupuesto" name="presupuesto">
+        <br>
+        
+        <!-- Sección Tiempo de entrega -->
+        <h2>Tiempo de entrega</h2>
+        <label for="tiempo_entrega">¿Cuándo le gustaría tener la página web terminada?:</label>
+        <input type="date" id="tiempo_entrega" name="tiempo_entrega">
+        <br>
+
+        <!-- Sección Intereses -->
+        <h3>Intereses</h3> <label for="interes">¿En qué áreas de la página web está más interesado? (Seleccione una)</label>
+        <br>
+        <select id="interes" name="interes" required>
+            <option value="diseno">Diseño</option>
+            <option value="funcionalidades">Funcionalidades</option>
+            <option value="contenido">Contenido</option>
+            <option value="marketing">Marketing</option>
+            <option value="otro">Otros (especifique):</option>
+        </select>
+        <br>
+        <input type="text" id="interes_otro" name="interes_otro" disabled> <br>
+    
+        <!-- Sección otros servicios -->
+        <h3>Otros servicios</h3> <label for="habilidades">¿Que otros servicios requiere implementar en su página web? (Seleccione todas las que apliquen)</label>
+
+        <input type="checkbox" id="habilidad_seo" name="habilidades[]" value="seo"> SEO
+        <br>
+        <input type="checkbox" id="habilidad_diseno_grafico" name="habilidades[]" value="diseno_grafico"> Diseño gráfico
+        <br>
+        <input type="checkbox" id="habilidad_redaccion" name="habilidades[]" value="redaccion"> Redacción de contenido
+        <br>
+        <input type="checkbox" id="habilidad_marketing_digital" name="habilidades[]" value="marketing_digital"> Marketing digital
+        <br>
+        <input type="checkbox" id="habilidad_otro" name="habilidades[]" value="otro"> Otros (especifique):
+        <br>
+        <input type="text" id="habilidad_otro_texto" name="habilidades_otro" disabled> <br>
+    
+        <!-- Sección información sitio actual -->
+        <h3>Información sitio actual</h3> <label for="url_sitio_actual">Enlace el sitio actual si lo posee:</label>
+        <br>
+        <input type="url" id="url_sitio_actual" name="url_sitio_actual">
+        <br>
+        <label for="archivos">Envie archivo ZIP, con imagenes, textos y detalles requeridos (máximo 50 MB):</label>
+        <br>
+        <input type="file" id="archivos" name="archivos[]" multiple> <br>
+
+        <!-- Sección Información adicional -->
+        <h2>Información adicional</h2>
+        <label for="informacion_adicional">Si tiene alguna otra información que considere importante para el desarrollo de la página web, no dude en incluirla.</label>
+        <textarea id="informacion_adicional" name="informacion_adicional"></textarea>
+        <br>
+        
+        <!-- Sección Comentarios -->
+        <h2>Comentarios</h2>
+        <label for="comentarios">¿Tiene algún comentario o pregunta?</label>
+        <textarea id="comentarios" name="comentarios"></textarea>
+        <br>
+
+        <!-- Botones en HTML4 -->
+        <!-- <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar"> -->
+
+        <!-- Botones en HTML5 -->
+        <button type="submit">Enviar</button>
+        <button type>Limpiar</button>
+
+    </form>
+</body>
+</html>
