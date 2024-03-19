@@ -1,0 +1,45 @@
+* {
+    border: 1px dotted blue;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: blue;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Mobile First */
+@media ( min-width: 567px ) {
+    h1 {
+        color: red;
+    }
+    .container {
+        width: 547px;
+    }
+}
+@media ( min-width: 768px ) {
+    h1 {
+        background-color:  red;
+        color: white;
+    }
+    .container {
+        width: 738px;
+    }
+}
+@media ( min-width: 992px ) {
+    h1 {
+        background-color:  green;
+        color: greenyellow;
+    }
+    .container {
+        width: 962px;
+    }
+}
+
+
