@@ -17,30 +17,43 @@ const estudiantes = [ persona1, persona2, {
     nombre: 'Ma Alejandra',
     peso: 64,
     altura: 1.76
+},
+{
+    nombre: 'Laura',
+    peso: 55,
+    altura: 1.50
 } ];
 
-console.log( '>>>', estudiantes );
-console.log( 'Cantidad Estudiantes', estudiantes.length );
-console.log( estudiantes[ 1 ].peso );
-console.log( estudiantes[ 1 ][ 'peso' ] );
+// Bucle: Es una forma de iterar elementos o simplemente hacer hacer iteraciones
+//        Los bucles en JS son: for, while, do-while
 
-
-
-// let imc = persona.peso / (persona.altura * persona.altura);
-
-// console.log( persona.nombre + ' ' + ' tiene un IMC de ' + imc );    // Concatenacion con el signo mas +
-// console.log( `${ persona.nombre } tiene un IMC de: ${ imc }` );     //  Contatenacion usando la interpolacion (EcmaScript 2015)
-
-// Condicionales
-// if( imc < 18.5  ) {
-//     alert( persona.nombre + ' estas muy flaquito' );
+// for( inicio; condicion; incremento/decremento)
+// for( let i = 0; i < 10; i++ ) {
+//     console.log( i );
 // }
-// else if( imc >= 18.5 && imc < 24.9 ) {
-//     alert( persona.nombre + ' estas una uva' );
+
+// Estraer los nombres de los estudiantes
+// for( let i = 0; i < estudiantes.length; i++ ) {
+//     console.log( estudiantes[ i ].nombre );
 // }
-// else if( imc >= 24.9 && imc < 29.9 ) {
-//     alert( persona.nombre + ' hey a mover el bote estas gordito' );
-// }
-// else {
-//     alert( persona.nombre + ' vas rodando rodando ' );
-// }
+
+for( let i = 0; i < estudiantes.length; i++ ) {
+    const imc = `${ estudiantes[ i ].peso / ( estudiantes[ i ].altura * estudiantes[ i ].altura ) }`;
+
+    console.log( `${ estudiantes[ i ].nombre } tu IMC es: ${ imc } `);
+
+    // Condicionales
+    if( imc < 18.5  ) {
+        alert( estudiantes[ i ].nombre + ' estas muy flaquito' );
+    }
+    else if( imc >= 18.5 && imc < 24.9 ) {
+        alert( estudiantes[ i ].nombre + ' estas una uva' );
+    }
+    else if( imc >= 24.9 && imc < 29.9 ) {
+        alert( estudiantes[ i ].nombre + ' hey a mover el bote estas gordito' );
+    }
+    else {
+        alert( estudiantes[ i ].nombre + ' vas rodando rodando ' );
+    }
+
+}
